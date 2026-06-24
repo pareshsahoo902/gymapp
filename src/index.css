@@ -28,7 +28,17 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-    --radius: 0.75rem;
+    --radius: 1rem;
+
+    /* Semantic Colors */
+    --success: 142.1 76.2% 36.3%;
+    --success-foreground: 355.7 100% 97.3%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 48 96% 89%;
+    --achievement: 45 93% 47%;
+    --achievement-foreground: 48 96% 89%;
+    --analytics: 271 81% 56%;
+    --analytics-foreground: 0 0% 100%;
   }
 }
 
@@ -37,6 +47,29 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased tracking-tight;
+  }
+
+  /* Increase base typography scale slightly */
+  html {
+    font-size: 16px; /* Base for rem */
+  }
+
+  h1 { @apply text-[44px] font-bold leading-tight tracking-tight; }
+  h2 { @apply text-[28px] font-bold leading-tight tracking-tight; }
+  h3 { @apply text-2xl font-semibold leading-tight; }
+  .card-value { @apply text-[36px] font-bold leading-tight; }
+  .label-text { @apply text-[14px] font-medium text-muted-foreground; }
+}
+
+@layer utilities {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top);
+  }
+  .glass-panel {
+    @apply bg-background/60 backdrop-blur-xl border border-white/10 shadow-lg;
   }
 }
