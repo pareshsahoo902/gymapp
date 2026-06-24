@@ -28,7 +28,7 @@ export default defineConfig({
             }
         })
     ],
-    base: '/gym-bud/',
+    base: '/',
     resolve: {
         alias: {
             '@': path.resolve(__dirname, './src'),
