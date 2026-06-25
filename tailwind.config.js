@@ -46,12 +46,32 @@ export default {
           '3': 'hsl(var(--chart-3))',
           '4': 'hsl(var(--chart-4))',
           '5': 'hsl(var(--chart-5))'
+        },
+        success: {
+          DEFAULT: 'hsl(var(--success))',
+          foreground: 'hsl(var(--success-foreground))'
+        },
+        warning: {
+          DEFAULT: 'hsl(var(--warning))',
+          foreground: 'hsl(var(--warning-foreground))'
+        },
+        achievement: {
+          DEFAULT: 'hsl(var(--achievement))',
+          foreground: 'hsl(var(--achievement-foreground))'
+        },
+        analytics: {
+          DEFAULT: 'hsl(var(--analytics))',
+          foreground: 'hsl(var(--analytics-foreground))'
         }
       },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)'
+      },
+      boxShadow: {
+        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.4)',
+        'glow': '0 0 20px rgba(var(--primary), 0.3)',
       }
     },
   },
